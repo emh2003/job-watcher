@@ -1,8 +1,8 @@
 {
-  "run_time": "2026-11-16T21:04:05Z",
+  "run_time": "2026-11-16T21:18:50Z",
   "first_run_date": "2026-11-16",
   "days_with_success": 1,
-  "open": 8604,
+  "open": 8608,
   "new_today": 0,
   "removed_today": 0,
   "sources": [
@@ -24,12 +24,12 @@
     {
       "name": "robinhood",
       "ok": true,
-      "count": 164
+      "count": 165
     },
     {
       "name": "affirm",
       "ok": true,
-      "count": 211
+      "count": 212
     },
     {
       "name": "sofi",
@@ -49,7 +49,7 @@
     {
       "name": "carta",
       "ok": true,
-      "count": 76
+      "count": 77
     },
     {
       "name": "databricks",
@@ -109,7 +109,7 @@
     {
       "name": "experian",
       "ok": true,
-      "count": 392
+      "count": 393
     },
     {
       "name": "servicenow",
