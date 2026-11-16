@@ -1,0 +1,9 @@
+{"pages": [
+  {"offset": 0, "limit": 100, "totalFound": 2, "content": [
+    {"id": "744000161904329", "name": "Finance Analyst", "company": {"identifier": "Wise", "name": "Wise"},
+     "releasedDate": "2026-11-16T20:07:24.621Z",
+     "location": {"city": "Austin", "region": "TX", "country": "us", "fullLocation": "Austin, TX, United States"},
+     "department": {"id": "1", "label": "Finance"}},
+    {"id": "744000161904330", "name": "Product Manager", "company": {"identifier": "Wise", "name": "Wise"},
+     "releasedDate": "2026-11-10T08:00:00.000Z", "location": {"city": "London"}, "department": {}}]},
+  {"offset": 100, "limit": 100, "totalFound": 2, "content": []}]}
