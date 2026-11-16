@@ -90,7 +90,7 @@ tracking system (ATS) that hosts it.
 | wise | Wise | SmartRecruiters | `GET api.smartrecruiters.com/v1/companies/Wise/postings` (100 per page) |
 | experian | Experian | SmartRecruiters | `…/companies/Experian/postings` |
 | servicenow | ServiceNow | SmartRecruiters | `…/companies/ServiceNow/postings` |
-| mastercard | Mastercard | Workday | `POST mastercard.wd1.myworkdayjobs.com/wday/cxs/mastercard/CorporateCareers/jobs` (20 per page) |
+| mastercard | Mastercard | Workday | `POST mastercard.wd1.myworkdayjobs.com/wday/cxs/mastercard/CorporateCareers/jobs` (20 per page, with a short pause between pages) |
 
 Notes:
 
@@ -99,6 +99,8 @@ Notes:
   is added to its entry in `sources.json` (and listed here).
 - **Empty columns:** Greenhouse's job list and Workday do not give a department, and Workday gives
   "Posted 3 Days Ago" instead of a date, so `department` / `posted_date` are empty for those rows.
+- **Rate limits:** a call that gets "too many requests" (429) or a server error is retried up to
+  three times, waiting longer each time, before the source is recorded as failed.
 - **Empty answers:** a board that answers with zero postings is recorded as a failed call, so a
   glitch cannot mark every posting of an employer as removed.
 

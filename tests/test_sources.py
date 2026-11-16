@@ -87,3 +87,45 @@ def test_sources_file():
     assert len(names) == len(set(names))
     for s in sources:
         assert s["ats"] in FETCHERS and s["employer"]
+
+
+class FakeResponse:
+    def __init__(self, status, payload=None, headers=None):
+        self.status_code, self._payload, self.headers = status, payload, headers or {}
+
+    def json(self):
+        return self._payload
+
+    def raise_for_status(self):
+        if self.status_code >= 400:
+            raise RuntimeError(f"HTTP {self.status_code}")
+
+
+def test_rate_limited_call_is_retried(monkeypatch):
+    import jobwatcher.sources as sources
+    answers = [FakeResponse(429, headers={"Retry-After": "1"}), FakeResponse(503), FakeResponse(200, {"jobs": []})]
+    waits = []
+    monkeypatch.setattr(sources.requests, "request", lambda *a, **k: answers.pop(0))
+    monkeypatch.setattr(sources.time, "sleep", waits.append)
+    assert sources._get("https://example.com") == {"jobs": []}
+    assert waits == [1, 15]
+
+
+def test_call_that_keeps_failing_raises(monkeypatch):
+    import jobwatcher.sources as sources
+    monkeypatch.setattr(sources.requests, "request", lambda *a, **k: FakeResponse(429))
+    monkeypatch.setattr(sources.time, "sleep", lambda s: None)
+    with pytest.raises(RuntimeError):
+        sources._get("https://example.com")
+
+
+def test_workday_pages_until_total(monkeypatch):
+    import jobwatcher.sources as sources
+    calls = []
+    def fake(method, url, **kwargs):
+        calls.append(kwargs["json"]["offset"])
+        return {"total": 45 if kwargs["json"]["offset"] == 0 else 0, "jobPostings": [{"title": "x"}]}
+    monkeypatch.setattr(sources, "_request", fake)
+    monkeypatch.setattr(sources.time, "sleep", lambda s: None)
+    raw = sources.fetch_workday({"host": "h", "tenant": "t", "site": "s"})
+    assert calls == [0, 20, 40] and len(raw["pages"]) == 3

@@ -1,6 +1,7 @@
 """Sources: one function per applicant tracking system (ATS) to fetch a job
 board as JSON, and one to convert what it returned into the common columns."""
 import json
+import time
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -10,6 +11,8 @@ ROOT = Path(__file__).resolve().parent.parent
 TIMEOUT = 60
 HEADERS = {"User-Agent": "job-watcher (class project)", "Accept": "application/json"}
 SEARCH_LIMIT = 5000  # boards larger than this must be configured with a "search" term
+PAGE_PAUSE = 0.5     # seconds between pages of a paged board, to stay under rate limits
+RETRY_WAITS = [5, 15, 45]  # seconds to wait before each retry of a rate-limited or failed call
 
 
 def load_sources(path=None):
@@ -18,10 +21,20 @@ def load_sources(path=None):
 
 # ---------- fetch: return exactly what the board's API returned ----------
 
-def _get(url, params=None):
-    r = requests.get(url, params=params, headers=HEADERS, timeout=TIMEOUT)
+def _request(method, url, **kwargs):
+    """One call, retried when the board says "too many requests" (429) or has a server error."""
+    for wait in RETRY_WAITS + [None]:
+        r = requests.request(method, url, headers=HEADERS, timeout=TIMEOUT, **kwargs)
+        if r.status_code not in (429, 500, 502, 503, 504) or wait is None:
+            break
+        retry_after = r.headers.get("Retry-After", "")
+        time.sleep(min(int(retry_after), 120) if retry_after.isdigit() else wait)
     r.raise_for_status()
     return r.json()
+
+
+def _get(url, params=None):
+    return _request("GET", url, params=params)
 
 
 def fetch_greenhouse(src):
@@ -48,6 +61,7 @@ def fetch_smartrecruiters(src):
         offset += 100
         if not page.get("content") or offset >= page.get("totalFound", 0):
             break
+        time.sleep(PAGE_PAUSE)
     return {"pages": pages}
 
 
@@ -57,15 +71,14 @@ def fetch_workday(src):
     pages, offset, total = [], 0, None
     while True:
         body = {"appliedFacets": {}, "limit": 20, "offset": offset, "searchText": src.get("search", "")}
-        r = requests.post(url, json=body, headers=HEADERS, timeout=TIMEOUT)
-        r.raise_for_status()
-        page = r.json()
+        page = _request("POST", url, json=body)
         pages.append(page)
         if total is None:  # Workday only reports the total on the first page
             total = page.get("total", 0)
         offset += 20
         if not page.get("jobPostings") or offset >= total:
             break
+        time.sleep(PAGE_PAUSE)
     return {"pages": pages}
 
 
