@@ -1,0 +1,126 @@
+{
+  "run_time": "2026-11-16T20:38:22Z",
+  "first_run_date": "2026-11-16",
+  "days_with_success": 1,
+  "open": 8172,
+  "new_today": 0,
+  "removed_today": 0,
+  "sources": [
+    {
+      "name": "stripe",
+      "ok": true,
+      "count": 791
+    },
+    {
+      "name": "coinbase",
+      "ok": true,
+      "count": 260
+    },
+    {
+      "name": "block",
+      "ok": true,
+      "count": 184
+    },
+    {
+      "name": "robinhood",
+      "ok": true,
+      "count": 164
+    },
+    {
+      "name": "affirm",
+      "ok": true,
+      "count": 209
+    },
+    {
+      "name": "sofi",
+      "ok": true,
+      "count": 50
+    },
+    {
+      "name": "brex",
+      "ok": true,
+      "count": 276
+    },
+    {
+      "name": "chime",
+      "ok": true,
+      "count": 71
+    },
+    {
+      "name": "carta",
+      "ok": true,
+      "count": 76
+    },
+    {
+      "name": "databricks",
+      "ok": true,
+      "count": 891
+    },
+    {
+      "name": "janestreet",
+      "ok": true,
+      "count": 216
+    },
+    {
+      "name": "point72",
+      "ok": true,
+      "count": 196
+    },
+    {
+      "name": "toast",
+      "ok": true,
+      "count": 348
+    },
+    {
+      "name": "palantir",
+      "ok": true,
+      "count": 303
+    },
+    {
+      "name": "veeva",
+      "ok": true,
+      "count": 856
+    },
+    {
+      "name": "ramp",
+      "ok": true,
+      "count": 178
+    },
+    {
+      "name": "plaid",
+      "ok": true,
+      "count": 142
+    },
+    {
+      "name": "airwallex",
+      "ok": true,
+      "count": 487
+    },
+    {
+      "name": "openai",
+      "ok": true,
+      "count": 833
+    },
+    {
+      "name": "wise",
+      "ok": true,
+      "count": 438
+    },
+    {
+      "name": "experian",
+      "ok": true,
+      "count": 392
+    },
+    {
+      "name": "servicenow",
+      "ok": true,
+      "count": 811
+    },
+    {
+      "name": "mastercard",
+      "ok": false,
+      "count": 0,
+      "error": "HTTPError: 429 Client Error: Too Many Requests for url: https://mastercard.wd1.myworkdayjobs.com/wday/cxs/mastercard/CorporateCareers/jobs"
+    }
+  ]
+}
