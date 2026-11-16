@@ -1,8 +1,8 @@
 {
-  "run_time": "2026-11-16T20:38:22Z",
+  "run_time": "2026-11-16T20:55:03Z",
   "first_run_date": "2026-11-16",
   "days_with_success": 1,
-  "open": 8172,
+  "open": 8177,
   "new_today": 0,
   "removed_today": 0,
   "sources": [
@@ -29,7 +29,7 @@
     {
       "name": "affirm",
       "ok": true,
-      "count": 209
+      "count": 210
     },
     {
       "name": "sofi",
@@ -54,7 +54,7 @@
     {
       "name": "databricks",
       "ok": true,
-      "count": 891
+      "count": 892
     },
     {
       "name": "janestreet",
@@ -99,12 +99,12 @@
     {
       "name": "openai",
       "ok": true,
-      "count": 833
+      "count": 834
     },
     {
       "name": "wise",
       "ok": true,
-      "count": 438
+      "count": 437
     },
     {
       "name": "experian",
@@ -114,7 +114,7 @@
     {
       "name": "servicenow",
       "ok": true,
-      "count": 811
+      "count": 814
     },
     {
       "name": "mastercard",
