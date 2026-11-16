@@ -1,7 +1,7 @@
 // Service worker: makes the site installable and usable offline.
 // Online, every request goes to the network and the answer is saved.
 // Offline, the saved copy is used, so the pages show the last data they loaded.
-const CACHE = "job-watcher-v1";
+const CACHE = "job-watcher-v2";
 const SHELL = ["./", "index.html", "browse.html", "market.html", "app.js", "style.css",
                "manifest.webmanifest", "icons/icon-192.png", "icons/icon-512.png"];
 

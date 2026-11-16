@@ -139,6 +139,9 @@ Three pages that load the two data files and do all calculations in the browser.
   removed postings per day, open postings per employer, days open (median), share removed within
   seven days, and top locations.
 
+All three pages share one navigation bar, serif fonts (Georgia / Times New Roman) and a light or dark
+theme. The button in the navigation bar switches the theme, and the choice is kept in the browser.
+
 The site installs as an app (web app manifest + service worker). Online it loads the data from the
 network; offline it opens and shows the last data it loaded.
 

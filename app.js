@@ -51,10 +51,25 @@ function frame(page) {
       <a class="brand" href="index.html">Job Watcher</a>
       <span class="offline" role="status">Offline: showing saved data</span>
       ${tabs.map(([href, name]) => `<a class="tab" href="${href}"${href === page ? ' aria-current="page"' : ""}>${name}</a>`).join("")}
+      <button type="button" class="theme" id="theme"></button>
     </div></nav>`);
+  themeButton();
   const setOffline = () => document.body.classList.toggle("is-offline", !navigator.onLine);
   addEventListener("online", setOffline); addEventListener("offline", setOffline); setOffline();
   if ("serviceWorker" in navigator) navigator.serviceWorker.register("sw.js").catch(() => {});
+}
+
+// ---------- light / dark theme (the choice is kept in the browser) ----------
+function themeButton() {
+  const root = document.documentElement, btn = $("#theme");
+  const current = () => root.dataset.theme || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+  const label = () => { const next = current() === "dark" ? "light" : "dark"; btn.textContent = next === "dark" ? "☾ Dark" : "☀ Light"; btn.setAttribute("aria-label", `Switch to ${next} theme`); };
+  btn.onclick = () => {
+    root.dataset.theme = current() === "dark" ? "light" : "dark";
+    try { localStorage.setItem("job-watcher-theme", root.dataset.theme); } catch {}
+    label();
+  };
+  label();
 }
 
 // ---------- shortlist (kept in the browser) ----------
