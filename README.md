@@ -90,15 +90,19 @@ tracking system (ATS) that hosts it.
 | wise | Wise | SmartRecruiters | `GET api.smartrecruiters.com/v1/companies/Wise/postings` (100 per page) |
 | experian | Experian | SmartRecruiters | `…/companies/Experian/postings` |
 | servicenow | ServiceNow | SmartRecruiters | `…/companies/ServiceNow/postings` |
-| mastercard | Mastercard | Workday | `POST mastercard.wd1.myworkdayjobs.com/wday/cxs/mastercard/CorporateCareers/jobs` (20 per page, with a short pause between pages) |
+| doordash | DoorDash | Greenhouse | `…/boards/doordashusa/jobs` |
 
 Notes:
 
+- **Workday:** the tool can also read Workday boards (`fetch_workday` in `jobwatcher/sources.py`, 20
+  postings per page). Mastercard's Workday board was on the list at first, but it answered "429 Too
+  Many Requests" to GitHub's servers on every run, even with pauses and retries, so it was replaced
+  with DoorDash as the assignment directs for an employer that blocks the tool.
 - **Search terms:** none. Every board above returns fewer than 5,000 postings, so each is read in
   full. If a board ever passes 5,000, the run records that source as failed until a `"search"` term
   is added to its entry in `sources.json` (and listed here).
-- **Empty columns:** Greenhouse's job list and Workday do not give a department, and Workday gives
-  "Posted 3 Days Ago" instead of a date, so `department` / `posted_date` are empty for those rows.
+- **Empty columns:** Greenhouse's job list does not give a department, so `department` is empty
+  for those rows.
 - **Rate limits:** a call that gets "too many requests" (429) or a server error is retried up to
   three times, waiting longer each time, before the source is recorded as failed.
 - **Empty answers:** a board that answers with zero postings is recorded as a failed call, so a

@@ -21,6 +21,5 @@
   {"name": "wise",        "employer": "Wise",        "ats": "smartrecruiters", "board": "Wise"},
   {"name": "experian",    "employer": "Experian",    "ats": "smartrecruiters", "board": "Experian"},
   {"name": "servicenow",  "employer": "ServiceNow",  "ats": "smartrecruiters", "board": "ServiceNow"},
-  {"name": "mastercard",  "employer": "Mastercard",  "ats": "workday",
-   "host": "mastercard.wd1.myworkdayjobs.com", "tenant": "mastercard", "site": "CorporateCareers"}
+  {"name": "doordash",    "employer": "DoorDash",    "ats": "greenhouse",      "board": "doordashusa"}
 ]
