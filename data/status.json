@@ -1,8 +1,8 @@
 {
-  "run_time": "2026-11-16T20:55:03Z",
+  "run_time": "2026-11-16T21:04:05Z",
   "first_run_date": "2026-11-16",
   "days_with_success": 1,
-  "open": 8177,
+  "open": 8604,
   "new_today": 0,
   "removed_today": 0,
   "sources": [
@@ -14,7 +14,7 @@
     {
       "name": "coinbase",
       "ok": true,
-      "count": 260
+      "count": 261
     },
     {
       "name": "block",
@@ -29,7 +29,7 @@
     {
       "name": "affirm",
       "ok": true,
-      "count": 210
+      "count": 211
     },
     {
       "name": "sofi",
@@ -69,7 +69,7 @@
     {
       "name": "toast",
       "ok": true,
-      "count": 348
+      "count": 347
     },
     {
       "name": "palantir",
@@ -117,10 +117,9 @@
       "count": 814
     },
     {
-      "name": "mastercard",
-      "ok": false,
-      "count": 0,
-      "error": "HTTPError: 429 Client Error: Too Many Requests for url: https://mastercard.wd1.myworkdayjobs.com/wday/cxs/mastercard/CorporateCareers/jobs"
+      "name": "doordash",
+      "ok": true,
+      "count": 426
     }
   ]
 }
