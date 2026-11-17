@@ -3,6 +3,8 @@ name: daily run
 on:
   schedule:
     - cron: "17 11 * * *"   # every day at 11:17 UTC (5:17 am Central)
+    - cron: "43 16 * * *"   # backup at 16:43 UTC (10:43 am Central), in case GitHub skips the first;
+                            # a second run on the same day just replaces that day's files
   workflow_dispatch:         # lets you start a run by hand from the Actions tab
 
 permissions:
