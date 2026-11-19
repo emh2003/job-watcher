@@ -1,15 +1,15 @@
 {
-  "run_time": "2026-11-18T23:09:30Z",
+  "run_time": "2026-11-19T19:29:00Z",
   "first_run_date": "2026-11-16",
-  "days_with_success": 3,
-  "open": 8618,
-  "new_today": 245,
-  "removed_today": 261,
+  "days_with_success": 4,
+  "open": 8637,
+  "new_today": 161,
+  "removed_today": 147,
   "sources": [
     {
       "name": "stripe",
       "ok": true,
-      "count": 785
+      "count": 770
     },
     {
       "name": "coinbase",
@@ -19,17 +19,17 @@
     {
       "name": "block",
       "ok": true,
-      "count": 187
+      "count": 186
     },
     {
       "name": "robinhood",
       "ok": true,
-      "count": 164
+      "count": 165
     },
     {
       "name": "affirm",
       "ok": true,
-      "count": 221
+      "count": 225
     },
     {
       "name": "sofi",
@@ -39,7 +39,7 @@
     {
       "name": "brex",
       "ok": true,
-      "count": 260
+      "count": 261
     },
     {
       "name": "chime",
@@ -54,7 +54,7 @@
     {
       "name": "databricks",
       "ok": true,
-      "count": 899
+      "count": 903
     },
     {
       "name": "janestreet",
@@ -69,47 +69,47 @@
     {
       "name": "toast",
       "ok": true,
-      "count": 329
+      "count": 333
     },
     {
       "name": "palantir",
       "ok": true,
-      "count": 306
+      "count": 307
     },
     {
       "name": "veeva",
       "ok": true,
-      "count": 857
+      "count": 865
     },
     {
       "name": "ramp",
       "ok": true,
-      "count": 182
+      "count": 183
     },
     {
       "name": "plaid",
       "ok": true,
-      "count": 143
+      "count": 141
     },
     {
       "name": "airwallex",
       "ok": true,
-      "count": 486
+      "count": 490
     },
     {
       "name": "openai",
       "ok": true,
-      "count": 834
+      "count": 840
     },
     {
       "name": "wise",
       "ok": true,
-      "count": 442
+      "count": 438
     },
     {
       "name": "experian",
       "ok": true,
-      "count": 391
+      "count": 401
     },
     {
       "name": "servicenow",
@@ -119,7 +119,7 @@
     {
       "name": "doordash",
       "ok": true,
-      "count": 417
+      "count": 414
     }
   ]
 }
