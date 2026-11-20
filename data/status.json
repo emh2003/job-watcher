@@ -1,45 +1,45 @@
 {
-  "run_time": "2026-11-20T19:05:50Z",
+  "run_time": "2026-11-20T22:50:22Z",
   "first_run_date": "2026-11-16",
   "days_with_success": 5,
-  "open": 8714,
-  "new_today": 233,
-  "removed_today": 156,
+  "open": 8778,
+  "new_today": 335,
+  "removed_today": 195,
   "sources": [
     {
       "name": "stripe",
       "ok": true,
-      "count": 779
+      "count": 781
     },
     {
       "name": "coinbase",
       "ok": true,
-      "count": 253
+      "count": 254
     },
     {
       "name": "block",
       "ok": true,
-      "count": 185
+      "count": 184
     },
     {
       "name": "robinhood",
       "ok": true,
-      "count": 167
+      "count": 164
     },
     {
       "name": "affirm",
       "ok": true,
-      "count": 219
+      "count": 217
     },
     {
       "name": "sofi",
       "ok": true,
-      "count": 52
+      "count": 54
     },
     {
       "name": "brex",
       "ok": true,
-      "count": 245
+      "count": 249
     },
     {
       "name": "chime",
@@ -49,12 +49,12 @@
     {
       "name": "carta",
       "ok": true,
-      "count": 79
+      "count": 80
     },
     {
       "name": "databricks",
       "ok": true,
-      "count": 895
+      "count": 897
     },
     {
       "name": "janestreet",
@@ -69,7 +69,7 @@
     {
       "name": "toast",
       "ok": true,
-      "count": 332
+      "count": 329
     },
     {
       "name": "palantir",
@@ -84,12 +84,12 @@
     {
       "name": "ramp",
       "ok": true,
-      "count": 185
+      "count": 187
     },
     {
       "name": "plaid",
       "ok": true,
-      "count": 148
+      "count": 149
     },
     {
       "name": "airwallex",
@@ -99,7 +99,7 @@
     {
       "name": "openai",
       "ok": true,
-      "count": 855
+      "count": 853
     },
     {
       "name": "wise",
@@ -114,12 +114,12 @@
     {
       "name": "servicenow",
       "ok": true,
-      "count": 911
+      "count": 973
     },
     {
       "name": "doordash",
       "ok": true,
-      "count": 413
+      "count": 411
     }
   ]
 }
