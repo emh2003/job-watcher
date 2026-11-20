@@ -1,15 +1,15 @@
 {
-  "run_time": "2026-11-19T23:14:45Z",
+  "run_time": "2026-11-20T19:05:50Z",
   "first_run_date": "2026-11-16",
-  "days_with_success": 4,
-  "open": 8635,
-  "new_today": 205,
-  "removed_today": 194,
+  "days_with_success": 5,
+  "open": 8714,
+  "new_today": 233,
+  "removed_today": 156,
   "sources": [
     {
       "name": "stripe",
       "ok": true,
-      "count": 770
+      "count": 779
     },
     {
       "name": "coinbase",
@@ -19,7 +19,7 @@
     {
       "name": "block",
       "ok": true,
-      "count": 182
+      "count": 185
     },
     {
       "name": "robinhood",
@@ -29,37 +29,37 @@
     {
       "name": "affirm",
       "ok": true,
-      "count": 227
+      "count": 219
     },
     {
       "name": "sofi",
       "ok": true,
-      "count": 54
+      "count": 52
     },
     {
       "name": "brex",
       "ok": true,
-      "count": 250
+      "count": 245
     },
     {
       "name": "chime",
       "ok": true,
-      "count": 78
+      "count": 80
     },
     {
       "name": "carta",
       "ok": true,
-      "count": 78
+      "count": 79
     },
     {
       "name": "databricks",
       "ok": true,
-      "count": 899
+      "count": 895
     },
     {
       "name": "janestreet",
       "ok": true,
-      "count": 215
+      "count": 216
     },
     {
       "name": "point72",
@@ -74,52 +74,52 @@
     {
       "name": "palantir",
       "ok": true,
-      "count": 307
+      "count": 308
     },
     {
       "name": "veeva",
       "ok": true,
-      "count": 865
+      "count": 860
     },
     {
       "name": "ramp",
       "ok": true,
-      "count": 184
+      "count": 185
     },
     {
       "name": "plaid",
       "ok": true,
-      "count": 141
+      "count": 148
     },
     {
       "name": "airwallex",
       "ok": true,
-      "count": 490
+      "count": 495
     },
     {
       "name": "openai",
       "ok": true,
-      "count": 848
+      "count": 855
     },
     {
       "name": "wise",
       "ok": true,
-      "count": 438
+      "count": 432
     },
     {
       "name": "experian",
       "ok": true,
-      "count": 400
+      "count": 403
     },
     {
       "name": "servicenow",
       "ok": true,
-      "count": 841
+      "count": 911
     },
     {
       "name": "doordash",
       "ok": true,
-      "count": 414
+      "count": 413
     }
   ]
 }
