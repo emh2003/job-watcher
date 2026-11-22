@@ -1,15 +1,15 @@
 {
-  "run_time": "2026-11-22T18:29:27Z",
+  "run_time": "2026-11-22T22:06:23Z",
   "first_run_date": "2026-11-16",
   "days_with_success": 7,
   "open": 8789,
-  "new_today": 11,
-  "removed_today": 15,
+  "new_today": 12,
+  "removed_today": 16,
   "sources": [
     {
       "name": "stripe",
       "ok": true,
-      "count": 777
+      "count": 778
     },
     {
       "name": "coinbase",
@@ -94,7 +94,7 @@
     {
       "name": "airwallex",
       "ok": true,
-      "count": 497
+      "count": 496
     },
     {
       "name": "openai",
