@@ -1,15 +1,15 @@
 {
-  "run_time": "2026-11-21T21:54:07Z",
+  "run_time": "2026-11-22T18:29:27Z",
   "first_run_date": "2026-11-16",
-  "days_with_success": 6,
-  "open": 8793,
-  "new_today": 48,
-  "removed_today": 34,
+  "days_with_success": 7,
+  "open": 8789,
+  "new_today": 11,
+  "removed_today": 15,
   "sources": [
     {
       "name": "stripe",
       "ok": true,
-      "count": 778
+      "count": 777
     },
     {
       "name": "coinbase",
@@ -54,7 +54,7 @@
     {
       "name": "databricks",
       "ok": true,
-      "count": 895
+      "count": 893
     },
     {
       "name": "janestreet",
@@ -69,7 +69,7 @@
     {
       "name": "toast",
       "ok": true,
-      "count": 326
+      "count": 324
     },
     {
       "name": "palantir",
@@ -104,7 +104,7 @@
     {
       "name": "wise",
       "ok": true,
-      "count": 433
+      "count": 432
     },
     {
       "name": "experian",
@@ -114,7 +114,7 @@
     {
       "name": "servicenow",
       "ok": true,
-      "count": 998
+      "count": 1000
     },
     {
       "name": "doordash",
