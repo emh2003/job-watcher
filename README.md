@@ -164,7 +164,7 @@ network; offline it opens and shows the last data it loaded.
 | `tests/test_role.py` | Tests the title rule. |
 | `tests/test_history.py` | Tests first-seen, last-seen, removed, reopened, failed sources and same-day reruns. |
 | `tests/fixtures/*.json` | A small sample answer from each ATS, used by the tests. |
-| `.github/workflows/daily.yml` | Runs the pipeline every day at 11:17 UTC (backup run at 16:43 UTC), commits the data, publishes the site. |
+| `.github/workflows/daily.yml` | Runs the pipeline every day at 02:17 and 08:17 UTC, commits the data, publishes the site. |
 | `.github/workflows/tests.yml` | Runs pytest on every push. |
 | `.github/workflows/pages.yml` | Republishes the site when a site file changes. |
 | `scripts/make_site.sh` | Collects the pages and the two data files into `_site/` for GitHub Pages. |

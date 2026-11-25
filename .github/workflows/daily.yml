@@ -2,9 +2,11 @@ name: daily run
 
 on:
   schedule:
-    - cron: "17 11 * * *"   # every day at 11:17 UTC (5:17 am Central)
-    - cron: "43 16 * * *"   # backup at 16:43 UTC (10:43 am Central), in case GitHub skips the first;
-                            # a second run on the same day just replaces that day's files
+    # Two start times early in the UTC day. GitHub often starts scheduled runs hours late; starting
+    # early keeps even a late run on the same UTC date. A second run on a date just replaces that
+    # date's files, so each date still counts once.
+    - cron: "17 2 * * *"    # 02:17 UTC (8:17 pm Central the evening before)
+    - cron: "17 8 * * *"    # 08:17 UTC (2:17 am Central)
   workflow_dispatch:         # lets you start a run by hand from the Actions tab
 
 permissions:
