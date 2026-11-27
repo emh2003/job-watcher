@@ -1,10 +1,10 @@
 {
-  "run_time": "2026-11-27T10:58:52Z",
+  "run_time": "2026-11-27T18:15:28Z",
   "first_run_date": "2026-11-16",
   "days_with_success": 12,
-  "open": 8753,
-  "new_today": 18,
-  "removed_today": 36,
+  "open": 8748,
+  "new_today": 42,
+  "removed_today": 68,
   "sources": [
     {
       "name": "stripe",
@@ -29,12 +29,12 @@
     {
       "name": "affirm",
       "ok": true,
-      "count": 216
+      "count": 218
     },
     {
       "name": "sofi",
       "ok": true,
-      "count": 58
+      "count": 57
     },
     {
       "name": "brex",
@@ -44,17 +44,17 @@
     {
       "name": "chime",
       "ok": true,
-      "count": 77
+      "count": 76
     },
     {
       "name": "carta",
       "ok": true,
-      "count": 81
+      "count": 82
     },
     {
       "name": "databricks",
       "ok": true,
-      "count": 881
+      "count": 888
     },
     {
       "name": "janestreet",
@@ -69,7 +69,7 @@
     {
       "name": "toast",
       "ok": true,
-      "count": 300
+      "count": 299
     },
     {
       "name": "palantir",
@@ -79,7 +79,7 @@
     {
       "name": "veeva",
       "ok": true,
-      "count": 874
+      "count": 865
     },
     {
       "name": "ramp",
@@ -94,7 +94,7 @@
     {
       "name": "airwallex",
       "ok": true,
-      "count": 503
+      "count": 502
     },
     {
       "name": "openai",
@@ -104,17 +104,17 @@
     {
       "name": "wise",
       "ok": true,
-      "count": 413
+      "count": 417
     },
     {
       "name": "experian",
       "ok": true,
-      "count": 417
+      "count": 413
     },
     {
       "name": "servicenow",
       "ok": true,
-      "count": 971
+      "count": 969
     },
     {
       "name": "doordash",
