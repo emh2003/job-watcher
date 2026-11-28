@@ -1,10 +1,10 @@
 {
-  "run_time": "2026-11-28T10:35:43Z",
+  "run_time": "2026-11-28T16:56:54Z",
   "first_run_date": "2026-11-16",
   "days_with_success": 13,
-  "open": 8752,
+  "open": 8750,
   "new_today": 11,
-  "removed_today": 9,
+  "removed_today": 11,
   "sources": [
     {
       "name": "stripe",
@@ -54,7 +54,7 @@
     {
       "name": "databricks",
       "ok": true,
-      "count": 889
+      "count": 888
     },
     {
       "name": "janestreet",
@@ -104,7 +104,7 @@
     {
       "name": "wise",
       "ok": true,
-      "count": 418
+      "count": 417
     },
     {
       "name": "experian",
