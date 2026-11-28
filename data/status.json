@@ -1,15 +1,15 @@
 {
-  "run_time": "2026-11-27T18:15:28Z",
+  "run_time": "2026-11-28T10:35:43Z",
   "first_run_date": "2026-11-16",
-  "days_with_success": 12,
-  "open": 8748,
-  "new_today": 42,
-  "removed_today": 68,
+  "days_with_success": 13,
+  "open": 8752,
+  "new_today": 11,
+  "removed_today": 9,
   "sources": [
     {
       "name": "stripe",
       "ok": true,
-      "count": 767
+      "count": 771
     },
     {
       "name": "coinbase",
@@ -24,7 +24,7 @@
     {
       "name": "robinhood",
       "ok": true,
-      "count": 161
+      "count": 162
     },
     {
       "name": "affirm",
@@ -54,7 +54,7 @@
     {
       "name": "databricks",
       "ok": true,
-      "count": 888
+      "count": 889
     },
     {
       "name": "janestreet",
@@ -69,7 +69,7 @@
     {
       "name": "toast",
       "ok": true,
-      "count": 299
+      "count": 298
     },
     {
       "name": "palantir",
@@ -104,7 +104,7 @@
     {
       "name": "wise",
       "ok": true,
-      "count": 417
+      "count": 418
     },
     {
       "name": "experian",
@@ -114,12 +114,12 @@
     {
       "name": "servicenow",
       "ok": true,
-      "count": 969
+      "count": 968
     },
     {
       "name": "doordash",
       "ok": true,
-      "count": 402
+      "count": 401
     }
   ]
 }
